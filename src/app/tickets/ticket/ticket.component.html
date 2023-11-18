@@ -2,5 +2,8 @@
   <!-- we use the {{ }} syntax to display the data, more info: https://angular.io/guide/displaying-data-->
   <h3>{{ticket.title}}</h3>
   <i class="fas fa-calendar-alt"></i> {{ticket.date | date: 'shortTime'}} &nbsp;&nbsp;
-  <i class="far fa-user"></i> {{ticket.author}}
+  <i class="far fa-user"></i> {{ticket.student}}
+  //changement de l'icone
+  <i class="fa-sharp fa-light fa-diploma"></i>{{ticket.major}}
+  <button type="submit" class="btn-custom" (click)="deleteTicket()">Delete</button>
 </div>

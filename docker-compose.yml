@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  proxy:
+    command: sudo npm start
+    working_dir: /app
+    image: sitespeedio/node:ubuntu-20.04-nodejs-14.17.6
+    volumes:
+      - .:/app
+    ports:
+      - 4200:4200
