@@ -12,11 +12,13 @@
   <br>
   <label for="Major">
   Major <br>
-    <select name="major-field" type="text" id="major" [formControlName]="'major'">
-      <option *ngFor="let currentMajor of Major" [value]="currentMajor">
-        {{currentMajor}}
-      </option>
-    </select> 
+  <select id="fruit" name="fruit" [formControlName]="'major'">
+    <option value="" disabled selected>Sélectionnez un Major</option>
+    <option value="Computer Science">Computer Science</option>
+    <option value="Electrical Engineering">Electrical Engineering</option>
+    <option value="Mechanical Engineering">Mechanical Engineering</option>
+    <option value="Biology">Biology</option>
+  </select>
   </label>
   <br>
   <button type="submit" class="btn-custom" (click)="addTicket()">Create</button>

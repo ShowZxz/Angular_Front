@@ -1,13 +1,16 @@
 <div>
-  <button (click)="toggleDisplayTicketArchived()">Toggle Archived Tickets</button>
+  <button (click)="toggleDisplayTicketArchived()">Toggle Tickets archive</button>
 </div>
 <div class="ticket-list">
   <div class="ticket" *ngFor="let ticket of ticketList">
       <!--Inputs & Output allow communication between parent & child components.-->
       <!--More information: https://angular.io/guide/component-interaction-->
-      <app-ticket [ticket]="ticket" (ticketHasBeenSelected)="ticketHasBeenSelected($event)"></app-ticket>
+      <app-ticket *ngIf="ticket.archived" [ticket]="ticket"
+                (ticketHasBeenSelected)="ticketHasBeenSelected($event)"
+                (ticketHasBeenRemoved)="ticketHasBeenRemoved($event)"
+                (ticketHasBeenArchived)="ticketHasBeenArchived($event)">
+    </app-ticket>
       
-      <app-ticket [ticket]="ticket" (ticketHasBeenDeleted)="ticketHasBeenDeleted($event)"></app-ticket>
       
   </div>
 </div>

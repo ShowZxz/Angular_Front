@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --source-map=false --verbose --host=0.0.0.0 --live-reload",
+    "start": "ng serve --source-map=false --verbose --host=0.0.0.0 --live-reload --poll 2000 --disable-host-check",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

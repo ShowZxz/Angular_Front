@@ -1,4 +1,7 @@
+import { Major } from "./Major";
+
 export interface Ticket {
+  
   title?: string;
   description?: string;
   date?: Date;
@@ -6,8 +9,4 @@ export interface Ticket {
   major?: Major;
   archived?: boolean;
 }
-export enum Major{
-  COMPUTER_SCIENCE = 'Computer Science',
-  ELECTRICAL_ENGINEERING = 'Electrical Engineering',
-  MECHANICAL_ENGINEERING = 'Mechanical Engineering',
-}
+

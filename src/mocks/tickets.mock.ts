@@ -1,10 +1,12 @@
-import { Major, Ticket } from '../models/ticket';
+import { Ticket } from '../models/ticket';
+import { Major } from "src/models/Major";
 
 const dateToday: Date = new Date();
 
 export const TICKETS_MOCKED: Ticket[] = [
   {
     // Titre modifié
+    
     title: 'London',
     description: '',
     date: dateToday,
@@ -13,6 +15,7 @@ export const TICKETS_MOCKED: Ticket[] = [
     archived: true,
   },
   {
+    
     title: 'SI5 in Paris',
     description: 'Description du voyage',
     date: dateToday,
@@ -20,4 +23,12 @@ export const TICKETS_MOCKED: Ticket[] = [
     major: Major.COMPUTER_SCIENCE,
     archived: false,
   },
+  {
+    title: 'Tokyo',
+    description: 'Description du voyage',
+    date: dateToday,
+    student: 'Java',
+    major: Major.COMPUTER_SCIENCE,
+    archived: false,
+  }
 ];
