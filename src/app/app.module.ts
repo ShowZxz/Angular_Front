@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TicketComponent, TicketFormComponent, TicketListComponent } from './tickets';
 import { TicketService } from '../services/ticket/ticket.service';
@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent // All the components needs to be declared
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     ReactiveFormsModule // Import all dependencies
   ],
